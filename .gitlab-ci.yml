@@ -1,0 +1,9 @@
+stages:
+  - execute
+
+execute_image:
+  stage: execute
+  image: docker
+  script:
+    - docker build -t test11 -f Dockerfile .
+    - docker run test11
